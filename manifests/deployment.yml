@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: asifwaquardemo 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: asifwaquardemo
+  template:
+    metadata:
+      labels:
+        app: asifwaquardemo 
+    spec:
+      containers:
+        - name: asifwaquardemo 
+          image: todolistacr2.azurecr.io/asifwaquardemo
+          ports:
+          - containerPort: 3000
